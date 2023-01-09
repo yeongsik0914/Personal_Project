@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>header</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 </head>
 <body>
     <section class="hbody">
@@ -15,9 +17,53 @@
           <li>Notice</li>
           <li>Contact</li>
         </ul>
-        <i class="fab fa-twitter-square"></i>
+        <i class="fa fa-twitter-square" style="font-size:36px"></i>
         <i class="fas fa-bars"></i>
         </article>
       </section>
 </body>
 </html>
+<script>
+  // 햄버거 버튼 클릭 이벤트 
+  var burger = $('.menu-trigger');
+
+  burger.each(function (index) {
+    var $this = $(this);
+
+    $this.on('click', function (e) {
+      e.preventDefault();
+      $(this).toggleClass('active-' + (index + 1));
+    })
+  });
+
+  var h = 0;
+
+  $(burger).on("click", function () {
+    if (h == 0) {
+		  $('.ham-con').animate({
+			  right: '0',
+			  opacity: 1
+		  }, 500);
+		  $(this).addClass('active-1');
+		  h++;
+	  } else if (h == 1) {
+		  $('.ham-con').animate({
+			  right: '-20%',
+			  opacity: 0
+		  }, 500);
+		  $(this).removeClass('active-1');
+		  h--;
+	  }
+	  $(window).scroll(function() {
+		  sct = $(window).scrollTop();
+      if(sct>30){
+        $('.ham-con').css({
+          opacity: 0,
+          right :'-20%'
+        }, 500);
+        $(burger).removeClass('active-1');
+        h=0;
+      }
+    });
+  })
+</script>
