@@ -20,10 +20,12 @@
         <div id="img_center">
           <a href="index.html"><img src="img/logo_transparent.jpg"></a>
         </div>
+
         <li><a href="#">Memories</a></li>
         <li><a href="#">Save</a></li>
         <li><a href="#">Tech</a></li>
         <li><a href="#">About Us</a></li>
+     
         <ul id="menu2">
           <li><a href="#">로그인</a></li>
           <li><a href="#">회원가입</a></li>
@@ -84,14 +86,14 @@
       $('.submenu'.index + ' a').css('color','gray');
     });
 
-    $('#nav_bar li').mouseover(function(){
+    $('#nav_bar ul').mouseover(function(){
       $('#sub_nav').css('display','block');
     });
-    $('#nav_bar li').mouseleave(function(){
+    $('#sub_nav').mouseleave(function(){
       $('#sub_nav').css('display','none');
     });
   });
   
-
+  
   
 </script>
