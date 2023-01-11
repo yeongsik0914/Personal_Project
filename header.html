@@ -20,8 +20,8 @@
         <a href="index.html"><img src="img/logo_transparent.jpg"></a>
       </div>
       <ul id="menu2">
-        <li><a href="#">로그인</a></li>
-        <li><a href="#">회원가입</a></li>
+        <li><a href="login.html">로그인</a></li>
+        <li><a href="signup.html">회원가입</a></li>
       </ul>
       <ul id="menu">
         <li><a href="#">Memories</a></li>
@@ -96,21 +96,22 @@
 
     $('.submenu').mouseover(function(){
       index = $(this).index();
-      $('#menu li:eq('+index+') a').css('color','white');
-      $('.submenu:eq('+index+') li a').css('color','white');
+      $('.submenu li a').mouseover(function(){
+        $('#menu li:eq('+index+') a').css('color','white');
+        $('.submenu:eq('+index+') li a').css('color','white');
+        $(this).css('color','#d195ff');
+      });
+      $('.submenu li a').mouseleave(function(){
+        $('.submenu:eq('+index+') li a').css('color','white');
+      });
     });
 
     $('.submenu').mouseleave(function(){
       $('#menu li:eq('+index+') a').css('color','gray');
       $('.submenu:eq('+index+') li a').css('color','gray');
-    });
+    }); 
 
-    // $('.submenu li a').mouseover(function(){
-    //     $(this).css('color','#d195ff');
-    // });
-    // $('.submenu li a').mouseleave(function(){
-    //   $(this).css('color','white');
-    // });
+   
     
 
 
