@@ -4,66 +4,94 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>header</title>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 </head>
 <body>
-    <section class="hbody">
-        <article class="nav">
-        <div class="title"><a href="./index.html">BRAND</a></div>
-        <ul id="menu">
-          <li><a href="./index.html">Home</a></li>
-          <li>Notice</li>
-          <li>Contact</li>
+  <nav id="nav_bar">
+      <ul id="menu">
+        <div>
+          <a class="menu-trigger" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+        </div>
+        <div id="img_center">
+          <a href="index.html"><img src="img/logo_transparent.jpg"></a>
+        </div>
+        <li><a href="#">Memories</a></li>
+        <li><a href="#">Save</a></li>
+        <li><a href="#">Tech</a></li>
+        <li><a href="#">About Us</a></li>
+        <ul id="menu2">
+          <li><a href="#">로그인</a></li>
+          <li><a href="#">회원가입</a></li>
         </ul>
-        <i class="fa fa-twitter-square" style="font-size:36px"></i>
-        <i class="fas fa-bars"></i>
-        </article>
-      </section>
+      </ul>
+  </nav>
+  <div class="clear"></div>
+  <nav id="sub_nav">
+    <div class="sub_sort">
+      <ul class="submenu" id="submenu1">
+        <li><a href="">sub1</a></li>
+        <li><a href="">sub2</a></li>
+        <li><a href="">sub3</a></li>
+        <li><a href="">sub4</a></li>
+      </ul>
+      <ul class="submenu" id="submenu2">
+        <li><a href="">sub1</a></li>
+        <li><a href="">sub2</a></li>
+        <li><a href="">sub3</a></li>
+        <li><a href="">sub4</a></li>
+      </ul>
+      <ul class="submenu" id="submenu3">
+        <li><a href="">sub1</a></li>
+        <li><a href="">sub2</a></li>
+        <li><a href="">sub3</a></li>
+        <li><a href="">sub4</a></li>
+      </ul>
+      <ul class="submenu" id="submenu4">
+        <li><a href="">sub1</a></li>
+        <li><a href="">sub2</a></li>
+        <li><a href="">sub3</a></li>
+        <li><a href="">sub4</a></li>
+      </ul>
+    </div>
+  </nav>
 </body>
 </html>
 <script>
-  // 햄버거 버튼 클릭 이벤트 
   var burger = $('.menu-trigger');
 
-  burger.each(function (index) {
-    var $this = $(this);
-
-    $this.on('click', function (e) {
-      e.preventDefault();
-      $(this).toggleClass('active-' + (index + 1));
-    })
+  burger.each(function(index){
+      var $this = $(this);
+      
+      $this.on('click', function(e){
+          e.preventDefault();
+          $(this).toggleClass('active-' + (index+1));
+      })
   });
 
-  var h = 0;
-
-  $(burger).on("click", function () {
-    if (h == 0) {
-		  $('.ham-con').animate({
-			  right: '0',
-			  opacity: 1
-		  }, 500);
-		  $(this).addClass('active-1');
-		  h++;
-	  } else if (h == 1) {
-		  $('.ham-con').animate({
-			  right: '-20%',
-			  opacity: 0
-		  }, 500);
-		  $(this).removeClass('active-1');
-		  h--;
-	  }
-	  $(window).scroll(function() {
-		  sct = $(window).scrollTop();
-      if(sct>30){
-        $('.ham-con').css({
-          opacity: 0,
-          right :'-20%'
-        }, 500);
-        $(burger).removeClass('active-1');
-        h=0;
-      }
+  $(document).ready(function(){
+    $('#menu li').mouseover(function(){
+      var index = $(this).index();
+      index = index - 2;
+      console.log(index);
+      $('.submenu'.index + ' a').css('color','white');
     });
-  })
+    $('#menu li').mouseleave(function(){
+      $('.submenu'.index + ' a').css('color','gray');
+    });
+
+    $('#nav_bar li').mouseover(function(){
+      $('#sub_nav').css('display','block');
+    });
+    $('#nav_bar li').mouseleave(function(){
+      $('#sub_nav').css('display','none');
+    });
+  });
+  
+
+  
 </script>

@@ -1,73 +1,139 @@
-  a {
-    text-decoration: none;
-  }
-  
-  li {
-    list-style-type: none;
-  }
-  
-  .hbody {
-    background-color: black;
-    width: 100%;
-    height: 100px;
-  }
-  
-  .nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-    color: white;
-  }
-  
-  .title {
-    font-size: 2em;
-  }
-  
-  .title > a {
-    color: white;
-  }
+#nav_bar {
+  /* border: 1px solid red; */
+  height: 70px;
+  background-color: black;
+}
 
-  @media only screen and (min-width: 825px) {
+#nav_bar div img {
+  /* border: 1px solid red; */
+  height: 70px;
+  float: left;
+}
 
-    #menu {
-      display: flex;
-    }
+#nav_bar ul#menu {
+  /*border: 1px solid red;*/
+  list-style-type: none;
+  text-align: center;
+}
+#nav_bar ul#menu li {
+  /* border: 1px solid red; */
+  width: 100px;
+  font-size: 18px;
+  display: inline-block;
+  margin: 20px 25px 0 25px;
+}
+#nav_bar ul#menu2{
+  float: right;
+  margin-top: 20px;
+}
+#nav_bar ul#menu2 li {
+  font-size: 14px;
+  display: inline-block;
+  margin: 0 20px 0 10px;
+}
+#nav_bar ul#menu li a:hover {
+  color: white;
+}
+#nav_bar ul#menu2 li a:hover {
+  color: white;
+}
+
+.menu-trigger {
+  float: right;
+}
+.menu-trigger,
+.menu-trigger span {
+  display: inline-block;
+  transition: all .4s;
+  box-sizing: border-box;
+}
+
+.menu-trigger {
+  /* border: 1px solid red; */
+  position: relative;
+  width: 35px;
+  height: 35px;
+  margin-right: 20px;
+  margin-left: 10px;
+  margin-top: 23px;
+  float: left;
+  display: none;
+}
+
+.menu-trigger span {
+  /* border: 1px solid red; */
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.menu-trigger span:nth-of-type(1) {
+  top: 0;
+}
+
+.menu-trigger span:nth-of-type(2) {
+  top: 10px;
+}
+
+.menu-trigger span:nth-of-type(3) {
+  top: 20px;
+}
+/* type-01 */
+/* 중앙 라인이 고정된 자리에서 투명하게 사라지며 상하라인 회전하며 엑스자 만들기 */
+.menu-trigger.active-1 span:nth-of-type(1) {
+  -webkit-transform: translateY(10px) rotate(-45deg) translateZ(0);
+  transform: translateY(10px) rotate(-45deg) translateZ(0);
+}
+
+.menu-trigger.active-1 span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.menu-trigger.active-1 span:nth-of-type(3) {
+  -webkit-transform: translateY(-10px) rotate(45deg) translateZ(0);
+  transform: translateY(-10px) rotate(45deg) translateZ(0);
+}
+
+#sub_nav {
+  border-top: 1px solid silver;
+  width: 100%;
+  height: 200px;
+  background-color: black;
+  display: none;
+}
+
+.sub_sort {
+  width: 695px;
+  /* border: 1px solid red; */
+  margin: 0 auto;
   
-    #menu > li {
-      padding: 20px 30px;
-      font-size: 20px;
-    }
-  
-    li > a {
-      color: white;
-    }
-  
-    .fa {
-      font-size: 35px;
-      color: #1DA1F2;
-    }
-  
-    .fas {
-      display: none;
-    }
+}
+.submenu {
+  text-align: center;
+  /* border: 1px solid red; */
+  font-size: 18px;
+  float: left;
+  width: 100px;
+  margin: 20px;
+  margin-right: 35px;
+}
+
+@media screen and (max-width: 1100px) {
+  .menu-trigger {
+    display: block;
   }
-
-  @media only screen and (max-width: 825px) {
-
-    .nav {
-      padding: 30px 40px;
-    }
-  
-    #menu {
-      display: none;
-    }
-  
-    .fa {
-      display : none;
-    }
-  
-    .fas {
-      font-size: 2em;
-    }
-  }  
+  #menu2 {
+    display: none;
+  }
+  #nav_bar ul#menu li {
+    display: none;
+  }
+  #nav_bar #img_center{
+    width: 180px;
+    height: 70px;
+    margin: 0 auto;
+  }
+}
