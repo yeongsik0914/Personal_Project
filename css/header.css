@@ -21,8 +21,9 @@
   margin-right: auto;
 }
 #nav_bar ul#menu li {
-  /* border: 1px solid yellow; */
+  /* border: 1px solid yellow;  */
   width: 100px;
+  height: 90px;
   font-size: 18px;
   display: inline-block;
   margin: 20px 25px 0 25px;
