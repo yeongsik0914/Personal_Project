@@ -1,7 +1,7 @@
-main > div {
-    height: 550px;
-    background-color: beige;
-}
+main{
+    flex: 1;
+    background-color: white;
+} 
 
 #ham_nav {
     height: 100%;
@@ -13,5 +13,10 @@ main > div {
     background-color: rgba(0,0,0, 0.9);
     overflow-x: hidden;
     transition: 0.5s;
+}
+
+#main_btn {
+    /* border: solid 1px red; */
+    height: 50%;
 }
 
