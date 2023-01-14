@@ -20,6 +20,41 @@ main #main_nav {
     height: 100%;
 }
 
+/* 메인 버튼들 */
+main div.main_btns {
+    height: 300px;
+    text-align: center;
+} 
+
+main div.main_btns .btns {
+    width: 28%;
+    height: 200px;
+    margin: 0 20px 10px 20px;
+    display: inline-flex;
+}
+
+main div.main_btns .btns a {
+    border: 2px solid silver;
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    color: black;
+}
+
+main div.main_btns .btns a h2 {
+    margin-top: 80px;
+}
+
+
+.Guidance_phrase {
+    color: black;
+    font-size: 22px;
+    margin: 30px;
+}
+
+main div.main_btns .btns a:hover {
+    border-color: #d195ff;
+}
 
 
 

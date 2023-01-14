@@ -4,7 +4,7 @@
     overflow: hidden;
 }
 .slidewrapper ul {
-    height: 400px;
+    height: 500px;
     position: relative;
 }
 
@@ -18,23 +18,19 @@
     align-items: center;
 }
 
-.slidewrapper ul li h2 {
+.slidewrapper ul li a {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+
+.slidewrapper ul li a h2 {
     font-size: 3em;
     text-transform: uppercase;
+    color: black;
+    margin: 200px;
 }
-
-/* .slidewrapper ul li:nth-child(1) {
-    left: 0%;
-}
-
-.slidewrapper ul li:nth-child(2) {
-    left: 100%;
-}
-
-.slidewrapper ul li:nth-child(3) {
-    left: 200%;
-} */
-
 
 .slidewrapper .pager {
     position: absolute;

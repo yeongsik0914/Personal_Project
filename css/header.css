@@ -37,6 +37,7 @@
   display: inline-block;
   margin: 0 20px 0 10px;
 }
+
 /* #nav_bar ul#menu li a:hover {
   color: white;
 } */
@@ -122,7 +123,7 @@
   text-align: center;
 }
 .submenu {
-  /* border: 1px solid blue; */
+   /* border: 1px solid blue;  */
   width: 100px;
   height: 199px;
   font-size: 18px;
@@ -131,14 +132,10 @@
 }
 
 .submenu li {
+  /* border: 1px solid red; */
   text-align: center;
   margin: 15px 0 15px 0;
 }
-
-.submenu li a:hover {
-  color: #d195ff; 
-}
-
 
 
 @media screen and (max-width: 1100px) {
