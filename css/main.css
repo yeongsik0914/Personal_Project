@@ -27,9 +27,9 @@ main div.main_btns {
 } 
 
 main div.main_btns .btns {
-    width: 28%;
+    width: 350px;
     height: 200px;
-    margin: 0 20px 10px 20px;
+    margin: 0 30px 10px 30px;
     display: inline-flex;
 }
 
@@ -56,6 +56,19 @@ main div.main_btns .btns a:hover {
     border-color: #d195ff;
 }
 
+@media screen and (max-width: 1250px) {
+    main div.main_btns {
+        height: 730px;
+    } 
+    main div.main_btns .btns {
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
+}
 
 
