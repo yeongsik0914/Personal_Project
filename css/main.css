@@ -15,8 +15,12 @@ main{
     transition: 0.5s;
 }
 
-#main_btn {
+main #main_nav {
     /* border: solid 1px red; */
-    height: 50%;
+    height: 100%;
 }
+
+
+
+
 

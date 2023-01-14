@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,39 +9,49 @@
     <link rel="stylesheet" type="text/css" href="css/header.css">
     <link rel="stylesheet" type="text/css" href="css/footer.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/slide.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script>
+        // HTML file include
+        $(document).ready(function () {
+            $("div[data-includeHTML]").each(function () {
+                $(this).load($(this).attr("data-includeHTML"));
+            });
+        });
+    </script>
 </head>
 <body>
     <header>
         <div data-includeHTML="Header.html"></div>
     </header>
     <main>
-        <div id="main_nav">
-            <div id="banner">
-                
+        <section id="main_nav">
+            <div class="slidewrapper">
+                <div class="pager">
+                    <a href="#slide1" class="active"></a>
+                    <a href="#slide2"></a>
+                    <a href="#slide3"></a>
+                </div>
+                <ul class="slide_container">
+                    <li class="slide" id="slide1">
+                        <h2>Slide 01</h2>
+                    </li>
+                    <li class="slide" id="slide2">
+                        <h2>Slide 02</h2>
+                    </li>
+                    <li class="slide" id="slide3">
+                        <h2>Slide 03</h2>
+                    </li>
+                </ul>
             </div>
-            <div id="main_btn">
-                <div></div>
-                <div></div>
-            </div>
-            <div style="clear: both;"></div>
-        </div> 
+        </section> 
     </main>
     <footer>
         <div data-includeHTML="footer.html"></div>
     </footer>
-  
- 
-
-
 </body>
 </html>
-<script>
-    // HTML file include
-    $(document).ready(function () {
-        $("div[data-includeHTML]").each(function () {
-            $(this).load($(this).attr("data-includeHTML"));
-        });
-    });
-</script>
+<script src="js/slide.js"></script>
+
+

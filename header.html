@@ -34,28 +34,28 @@
   <nav id="sub_nav">
     <div class="sub_sort">
       <ul class="submenu">
-        <li><a href="">sub1</a></li>
-        <li><a href="">sub2</a></li>
-        <li><a href="">sub3</a></li>
-        <li><a href="">sub4</a></li>
+        <li><a href="#">sub1</a></li>
+        <li><a href="#">sub2</a></li>
+        <li><a href="#">sub3</a></li>
+        <li><a href="#">sub4</a></li>
       </ul>
       <ul class="submenu">
-        <li><a href="">sub1</a></li>
-        <li><a href="">sub2</a></li>
-        <li><a href="">sub3</a></li>
-        <li><a href="">sub4</a></li>
+        <li><a href="#">sub1</a></li>
+        <li><a href="#">sub2</a></li>
+        <li><a href="#">sub3</a></li>
+        <li><a href="#">sub4</a></li>
       </ul>
       <ul class="submenu">
-        <li><a href="">sub1</a></li>
-        <li><a href="">sub2</a></li>
-        <li><a href="">sub3</a></li>
-        <li><a href="">sub4</a></li>
+        <li><a href="#">sub1</a></li>
+        <li><a href="#">sub2</a></li>
+        <li><a href="#">sub3</a></li>
+        <li><a href="#">sub4</a></li>
       </ul>
       <ul class="submenu">
-        <li><a href="">sub1</a></li>
-        <li><a href="">sub2</a></li>
-        <li><a href="">sub3</a></li>
-        <li><a href="">sub4</a></li>
+        <li><a href="#">sub1</a></li>
+        <li><a href="#">sub2</a></li>
+        <li><a href="#">sub3</a></li>
+        <li><a href="#">sub4</a></li>
       </ul>
     </div>
   </nav>
@@ -85,6 +85,8 @@
 
     $('#sub_nav').mouseleave(function(){
       $('#sub_nav').css('display','none');
+      $('#menu li a').css('color','gray');
+      $('.submenu li a').css('color','gray');
     });
 
     $('#sub_nav').mouseover(function(){
@@ -93,6 +95,8 @@
 
     $('#nav_bar #menu').mouseleave(function(){
       $('#sub_nav').css('display','none');
+      $('#menu li a').css('color','gray');
+      $('.submenu li a').css('color','gray');
     });
 
     $('#menu li').mouseover(function(){
