@@ -23,7 +23,22 @@
 </head>
 <body>
     <article class="sub_menubar">
-
+        <div id="sub_header">
+            <div class="sub_header_menu">
+                <a href="login.html"><h3>로그인</h3></a>
+            </div>
+            <div class="sub_header_menu">
+                <a href="signup.html"><h3>회원가입</h3></a>
+            </div>
+        </div>
+        <div id="sub_main">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
     </article>
     <div class="index_nav">
         <header>
@@ -66,3 +81,18 @@
 </body>
 </html>
 <script src="js/slide.js"></script>
+<script>
+    // 햄버거 메뉴바 디자인 작업 시작
+    var index = null;
+    $('.sub_header_menu').mouseenter(function(){
+        index = $(this).index();
+        $('.sub_header_menu:eq('+index+')').css({background: 'white'});
+        $('.sub_header_menu:eq('+index+') a h3').css({color: 'black'});
+    });
+    $('.sub_header_menu').mouseleave(function(){
+        index = $(this).index();
+        $('.sub_header_menu:eq('+index+')').css({background: 'black'});
+        $('.sub_header_menu:eq('+index+') a h3').css({color: 'white'});
+    });
+    // 햄버거 메뉴바 디자인 작업 끝
+</script>
