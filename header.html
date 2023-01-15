@@ -64,17 +64,36 @@
 <script>
   // 햄버거 토글 버튼
   var burger = $('.menu-trigger');
-
+  var burger_toggle = 0;
+  var window_idx = undefined;
+  var window_toggle = undefined;
   burger.each(function(index){
       var $this = $(this);
-      
+      window_idx = index;
       $this.on('click', function(e){
           e.preventDefault();
-          $(this).toggleClass('active-' + (index+1));
-          $('#ham_nav').css('width', '200px');
-          
+          window_toggle = 0;
+          $(this).toggleClass('active-' + (index+1));  
       })
   });
+
+  burger.on('click', function(){
+    if(burger_toggle == 0){
+      $('.sub_menubar').animate({left:'0px'});
+      $('header').css({position:'fixed'}).animate({left:'350px'});
+      $('.index_nav').css({position:'relative'}).animate({left:'350px'});
+      $('body').css({overflow: 'hidden'});
+      
+      burger_toggle = 1;
+    } else {
+      $('.sub_menubar').animate({left:'-350px'});
+      $('header').css({position:'fixed'}).animate({left:'0px'});
+      $('.index_nav').css({position:'relative'}).animate({left:'0px'});
+      $('body').css({overflow: 'visible'});
+      burger_toggle = 0;
+    }
+  });
+
   // 햄버거 토글 버튼 끝
   $(document).ready(function(){
     var index = null;
@@ -128,4 +147,23 @@
     }); 
     // 메뉴바 마우스 이벤트 끝
   });
+
+
+  //반응형 메뉴바 닫기
+  $(window).resize(function(){ 
+  if (window.innerWidth > 1250) {  // 다바이스 크기가 480이상일때 
+    $('.sub_menubar').css({left: '-350px'});
+    $('.index_nav').css({left: '0px'});
+    $('header').css({left: '0px'});
+  } else {
+    if(window_toggle == 0){
+      $(burger).toggleClass('active-' + (window_idx+1));
+      window_toggle = 1;
+      burger_toggle = 0;
+    } else {
+      return false;
+    }
+     
+  }
+  }).resize(); 
 </script>

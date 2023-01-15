@@ -22,43 +22,47 @@
     </script>
 </head>
 <body>
-    <header>
-        <div data-includeHTML="Header.html"></div>
-    </header>
-    <main>
-        <section id="main_nav">
-            <div class="slidewrapper"> <!-- 슬라이드 시작 -->
-                <div class="pager">
-                    <a href="#slide1" class="active"></a>
-                    <a href="#slide2"></a>
-                    <a href="#slide3"></a>
+    <article class="sub_menubar">
+
+    </article>
+    <div class="index_nav">
+        <header>
+            <div data-includeHTML="Header.html"></div>
+        </header>
+        <main>
+            <section id="main_nav">
+                <div class="slidewrapper"> <!-- 슬라이드 시작 -->
+                    <div class="pager">
+                        <a href="#slide1" class="active"></a>
+                        <a href="#slide2"></a>
+                        <a href="#slide3"></a>
+                    </div>
+                    <ul class="slide_container">
+                        <li class="slide" id="slide1">
+                            <a href="motion_blur.html"><h2>사진을 모션블러로 빠르게 볼 수 있다고!?</h2></a>
+                        </li>
+                        <li class="slide" id="slide2">
+                            <a href="thumbnail.html"><h2>사진을 큰 화면으로 보자!</h2></a>
+                        </li>
+                        <li class="s  lide" id="slide3">
+                            <a href="photo_management.html"><h2>나만의 추억 관리</h2></a>
+                        </li>
+                    </ul>
+                </div> <!-- 슬라이드 끝 -->
+                <div class="main_btns">
+                    <div class="Guidance_phrase"><h1>당신의 기억을 공유하세요.</h1></div>
+                    <div class="btns" id="motion_blur"><a href="motion_blur.html"><h2>모션블러</h2></a></div>
+                    <div class="btns" id="thumbnail"><a href="thumbnail.html"><h2>썸네일</h2></a></div>
+                    <div class="btns" id="photo_management"><a href="photo_management.html"><h2>사진 관리</h2></a></div>
                 </div>
-                <ul class="slide_container">
-                    <li class="slide" id="slide1">
-                        <a href="motion_blur.html"><h2>사진을 모션블러로 빠르게 볼 수 있다고!?</h2></a>
-                    </li>
-                    <li class="slide" id="slide2">
-                        <a href="thumbnail.html"><h2>사진을 큰 화면으로 보자!</h2></a>
-                    </li>
-                    <li class="slide" id="slide3">
-                        <a href="photo_management.html"><h2>나만의 추억 관리</h2></a>
-                    </li>
-                </ul>
-            </div> <!-- 슬라이드 끝 -->
-            <div class="main_btns">
-                <div class="Guidance_phrase"><h1>당신의 기억을 공유하세요.</h1></div>
-                <div class="btns" id="motion_blur"><a href="motion_blur.html"><h2>모션블러</h2></a></div>
-                <div class="btns" id="thumbnail"><a href="thumbnail.html"><h2>썸네일</h2></a></div>
-                <div class="btns" id="photo_management"><a href="photo_management.html"><h2>사진 관리</h2></a></div>
-            </div>
-            <div class="clear"></div>
-        </section> 
-    </main>
-    <footer>
-        <div data-includeHTML="footer.html"></div>
-    </footer>
+                <div class="clear"></div>
+            </section> 
+        </main>
+        <footer>
+            <div data-includeHTML="footer.html"></div>
+        </footer>
+    </div>
+           
 </body>
 </html>
 <script src="js/slide.js"></script>
-
-

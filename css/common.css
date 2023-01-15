@@ -5,7 +5,7 @@ html, body {
     font-family:'Noto Sans KR';
 }
 
-body {
+body, .index_nav {
     display: flex;
     flex-direction: column;
 }
