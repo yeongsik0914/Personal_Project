@@ -155,14 +155,14 @@
     $('.sub_menubar').css({left: '-350px'});
     $('.index_nav').css({left: '0px'});
     $('header').css({left: '0px'});
-  } else {
+    burger_toggle = 0;
     if(window_toggle == 0){
       $(burger).toggleClass('active-' + (window_idx+1));
       window_toggle = 1;
-      burger_toggle = 0;
     } else {
       return false;
     }
+  } else {
      
   }
   }).resize(); 
