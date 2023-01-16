@@ -52,7 +52,10 @@ let slideWrapper = $('.slidewrapper'),
     slideWrapper.mouseenter(function(){
         clearInterval(timer);
         timer = undefined;
+        // console.log(timer);
     })
     .mouseleave(function(){
         autoSlide();
     });
+
+   

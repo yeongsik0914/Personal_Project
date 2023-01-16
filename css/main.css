@@ -16,7 +16,7 @@ main{
 }
 
 main #main_nav {
-    /* border: solid 1px red; */
+    /* border: solid 1px red;  */
     height: 100%;
 }
 
@@ -94,6 +94,22 @@ main div.main_btns .btns a:hover {
    margin-top: 10px;
    color: white;
 }
+
+#sub_main ul li {
+    height: 150px;
+    border-bottom: solid 1px silver;
+    text-align: center;
+}
+
+#sub_main ul li a {
+    color: white;
+}
+
+#sub_main ul li a h2 {
+    height: 150px;
+    padding-top: 50px;
+}
+
 
 
 @media screen and (max-width: 1250px) {
