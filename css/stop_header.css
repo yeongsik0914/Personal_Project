@@ -1,0 +1,14 @@
+.back_home {
+    width: 100px;
+    height: 50px;
+    border-radius: 25px;
+    border: 2px solid white;
+    position: absolute;
+    top: 15px;
+    left: 30px;
+    background-color: black;
+}
+
+.back_home a {
+    color: white;
+}

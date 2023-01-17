@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/stop_header.css">
+    <link rel="stylesheet" type="text/css" href="css/stop_motion.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script>
+        // HTML file include
+        $(document).ready(function () {
+            $("div[data-includeHTML]").each(function () {
+                $(this).load($(this).attr("data-includeHTML"));
+            });
+        });
+    </script>
+    <title>스톱모션 페이지</title>
+</head>
+<body>
+    <header>
+        <div data-includeHTML="stop_header.html"></div>
+    </header>
+    <main>
+        <section class="main_nav">
+            <div class="btns">
+                <button class="button" type="button"><h1>+</h2></button>
+                <h3>controller</h3>
+                <button class="button" type="button"><h1>-</h1></button>
+            </div>
+            <div class="images">
+                <div class="images_tle">
+                    <img src="img/space-1065750_960_720.png">
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+</html>

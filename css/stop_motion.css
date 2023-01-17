@@ -1,0 +1,47 @@
+body {
+    background-color: rgb(99, 96, 96);
+}
+
+header {
+    height: 50px;
+    /* background-color: rgb(99, 96, 96); */
+}
+
+main {
+    flex: 1;
+    /* background-color: rgb(99, 96, 96); */
+}
+
+footer {
+    height: 50px;
+    /* background-color: rgb(99, 96, 96); */
+}
+
+.btns {
+    position: absolute;
+    top: 40%;
+    left: 50px;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.button {
+    background-color: black;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+    border: 2px solid white;
+}
+
+.button h1 {
+    color: white;
+}
+
+.images_tle img {
+    width: 450px;
+    height: 250px;
+    position: absolute;
+    top: 35%;
+    left: 38%;
+}
