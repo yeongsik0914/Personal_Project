@@ -38,10 +38,14 @@ footer {
     color: white;
 }
 
+
 .images_tle img {
-    width: 450px;
-    height: 250px;
+    width: 650px;
+    height: 350px;
     position: absolute;
-    top: 35%;
-    left: 38%;
+    top: 30%;
+    left: 33%;
+    border: 2px solid black;
+    
+    box-shadow: 10px 10px rgb(22, 22, 22);
 }
