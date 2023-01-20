@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(99, 96, 96);
+    /* background-color: rgb(99, 96, 96); */
 }
 
 header {
@@ -87,8 +87,8 @@ footer {
     left: 220px;
     border: 5px solid transparent;
     background-image: linear-gradient(rgb(99, 96, 96),rgb(99, 96, 96)), linear-gradient(to right, #fbfcb9be, #ffcdf3aa, #65d3ffaa);
-            background-origin: border-box;
-            background-clip: content-box, border-box;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
 }
 
 #marble_ball_2 {
@@ -100,8 +100,8 @@ footer {
     left: 385px;
     border: 5px solid transparent;
     background-image: linear-gradient(rgb(99, 96, 96),rgb(99, 96, 96)), linear-gradient(to right, #fbfcb9be, #ffcdf3aa, #65d3ffaa);
-            background-origin: border-box;
-            background-clip: content-box, border-box;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
 }
 
 #marble_ball_3 {
@@ -113,8 +113,8 @@ footer {
     left: 435px;
     border: 5px solid transparent;
     background-image: linear-gradient(rgb(99, 96, 96),rgb(99, 96, 96)), linear-gradient(to right, #fbfcb9be, #ffcdf3aa, #65d3ffaa);
-            background-origin: border-box;
-            background-clip: content-box, border-box;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
 }
 
 #marble_ball_4 {
@@ -126,8 +126,8 @@ footer {
     left: 375px;
     border: 5px solid transparent;
     background-image: linear-gradient(rgb(99, 96, 96),rgb(99, 96, 96)), linear-gradient(to right, #fbfcb9be, #ffcdf3aa, #65d3ffaa);
-            background-origin: border-box;
-            background-clip: content-box, border-box;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
 }
 
 #marble_ball_5 {
@@ -139,8 +139,8 @@ footer {
     left: 220px;
     border: 5px solid transparent;
     background-image: linear-gradient(rgb(99, 96, 96),rgb(99, 96, 96)), linear-gradient(to right, #fbfcb9be, #ffcdf3aa, #65d3ffaa);
-            background-origin: border-box;
-            background-clip: content-box, border-box;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
 }
 
 #marble_ball_6 {
@@ -152,8 +152,8 @@ footer {
     left: 70px;
     border: 5px solid transparent;
     background-image: linear-gradient(rgb(99, 96, 96),rgb(99, 96, 96)), linear-gradient(to right, #fbfcb9be, #ffcdf3aa, #65d3ffaa);
-            background-origin: border-box;
-            background-clip: content-box, border-box;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
 }
 
 #marble_ball_7 {
@@ -165,8 +165,8 @@ footer {
     left: 5px;
     border: 5px solid transparent;
     background-image: linear-gradient(rgb(99, 96, 96),rgb(99, 96, 96)), linear-gradient(to right, #fbfcb9be, #ffcdf3aa, #65d3ffaa);
-            background-origin: border-box;
-            background-clip: content-box, border-box;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
 }
 
 #marble_ball_8 {
@@ -178,8 +178,8 @@ footer {
     left: 65px;
     border: 5px solid transparent;
     background-image: linear-gradient(rgb(99, 96, 96),rgb(99, 96, 96)), linear-gradient(to right, #fbfcb9be, #ffcdf3aa, #65d3ffaa);
-            background-origin: border-box;
-            background-clip: content-box, border-box;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
 }
 
 .marble {animation: rotate_image 6s ease infinite;transform-origin: 50% 50%;}
