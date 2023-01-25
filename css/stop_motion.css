@@ -182,7 +182,7 @@ footer {
     background-clip: content-box, border-box;
 }
 
-.marble {animation: rotate_image 6s ease infinite;transform-origin: 50% 50%;}
+.marble {animation: rotate_image 30s linear infinite;transform-origin: 50% 50%;}
 
     @keyframes rotate_image{
     100% {
@@ -190,7 +190,7 @@ footer {
     }
 }
 
-.marble span {animation: rotate_image 6s ease infinite;transform-origin: 50% 50%;}
+.marble span {animation: rotate_image 6s linear infinite;transform-origin: 50% 50%;}
 
     @keyframes rotate_image{
     100% {
