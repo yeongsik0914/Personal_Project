@@ -33,16 +33,16 @@
             </div>
             <div class="images">
                 <div class="images_tle">
-                    <img id="sample_img" src="img/sky.jpg">
+                    <img id="sample_img" src="pgimg/a0.jpg">
                     <div class="marble">
-                        <span id="marble_ball_1"></span>
-                        <span id="marble_ball_2"></span>
-                        <span id="marble_ball_3"></span>
-                        <span id="marble_ball_4"></span>
-                        <span id="marble_ball_5"></span>
-                        <span id="marble_ball_6"></span>
-                        <span id="marble_ball_7"></span>
-                        <span id="marble_ball_8"></span>
+                        <img id="marble_ball_1" src="pgimg/a0.jpg">
+                        <img id="marble_ball_2" src="pgimg/a1.jpg">
+                        <img id="marble_ball_3" src="pgimg/a2.jpg">
+                        <img id="marble_ball_4" src="pgimg/a3.jpg">
+                        <img id="marble_ball_5" src="pgimg/a4.jpg">
+                        <img id="marble_ball_6" src="pgimg/a5.jpg">
+                        <img id="marble_ball_7" src="pgimg/a6.jpg">
+                        <img id="marble_ball_8" src="pgimg/a7.jpg">
                     </div>
                 </div>
             </div>
@@ -54,10 +54,6 @@
 <script>
     const colorThief = new ColorThief();
     var colors = colorThief.getPalette($('#sample_img')[0],8);
-   /* for(var i=0; i<colors.length; i++){
-        $('.marble span:eq('+ i +')').css('background-color', 'rgb('+ colors[i] +')');
-        console.log(colors[i]);
-    } */
 
     //색상 추출 후 배경에 그라데이션 처리
     $('body').css({
@@ -69,6 +65,39 @@
     $('.back_home').css({
         background:'linear-gradient(rgb('+ colors[0]+'), rgb('+ colors[1]+'), rgb('+ colors[2]+'))'
     });
+
+
+    //3.75초 마다 스톱모션 이미지 변경 처리
+
+    let timer = undefined,
+        currnetIdx = 7;
+        show_img = $('#sample_img'),
+        ball_img = $('.marble').find('img');
+
+    function stopMotion(){
+        timer = setInterval(()=>{
+            if(currnetIdx < 0){
+                 currnetIdx = 7;
+            }
+            show_img.attr({src: 'pgimg/a'+currnetIdx+'.jpg'});
+            currnetIdx = currnetIdx -1;
+
+            const colorThief = new ColorThief();
+            var colors = colorThief.getPalette($('#sample_img')[0],8);
+
+            //색상 추출 후 배경에 그라데이션 처리
+            $('body').css({
+                background:'linear-gradient(rgb('+ colors[0]+'), rgb('+ colors[1]+'), rgb('+ colors[2]+'), rgb('+ colors[3]+'), rgb('+ colors[4]+'), rgb('+ colors[5]+'), rgb('+ colors[6]+'), rgb('+ colors[7]+'))'
+            });
+            $('.button').css({
+                background:'linear-gradient(rgb('+ colors[0]+'), rgb('+ colors[1]+'), rgb('+ colors[2]+'))'
+            });
+            $('.back_home').css({
+                background:'linear-gradient(rgb('+ colors[0]+'), rgb('+ colors[1]+'), rgb('+ colors[2]+'))'
+            });
+        }, 3750);
+    }
+    stopMotion();
     
     
 </script>
