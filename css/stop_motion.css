@@ -190,7 +190,7 @@ footer {
     }
 }
 
-.marble span {animation: rotate_image 6s linear infinite;transform-origin: 50% 50%;}
+.marble img {animation: rotate_image 10s linear infinite;transform-origin: 50% 50%;}
 
     @keyframes rotate_image{
     100% {

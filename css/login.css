@@ -1,0 +1,13 @@
+main {
+    flex: 1;
+}
+
+header {
+    height: 70px;
+    background-color: black;
+    text-align: center;
+}
+
+header img {
+    height: 70px;
+}
