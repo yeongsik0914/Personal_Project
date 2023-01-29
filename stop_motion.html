@@ -52,38 +52,29 @@
 </body>
 </html>
 <script>
-    const colorThief = new ColorThief();
-    var colors = colorThief.getPalette($('#sample_img')[0],8);
-
-    //색상 추출 후 배경에 그라데이션 처리
-    $('body').css({
-        background:'linear-gradient(rgb('+ colors[0]+'), rgb('+ colors[1]+'), rgb('+ colors[2]+'), rgb('+ colors[3]+'), rgb('+ colors[4]+'), rgb('+ colors[5]+'), rgb('+ colors[6]+'), rgb('+ colors[7]+'))'
-    });
-    $('.button').css({
-        background:'linear-gradient(rgb('+ colors[0]+'), rgb('+ colors[1]+'), rgb('+ colors[2]+'))'
-    });
-    $('.back_home').css({
-        background:'linear-gradient(rgb('+ colors[0]+'), rgb('+ colors[1]+'), rgb('+ colors[2]+'))'
-    });
-
-
     //3.75초 마다 스톱모션 이미지 변경 처리
-
     let timer = undefined,
         currnetIdx = 7;
         show_img = $('#sample_img'),
         ball_img = $('.marble').find('img');
 
     function stopMotion(){
+        const colorThief = new ColorThief();
+        var colors = colorThief.getPalette($('#sample_img')[0],8);
+
+        $('body').css({
+            background:'linear-gradient(rgb('+ colors[0]+'), rgb('+ colors[1]+'), rgb('+ colors[2]+'), rgb('+ colors[3]+'), rgb('+ colors[4]+'), rgb('+ colors[5]+'), rgb('+ colors[6]+'), rgb('+ colors[7]+'))'
+        });
+        $('.button').css({
+            background:'linear-gradient(rgb('+ colors[0]+'), rgb('+ colors[1]+'), rgb('+ colors[2]+'))'
+        });
         timer = setInterval(()=>{
             if(currnetIdx < 0){
                  currnetIdx = 7;
             }
             show_img.attr({src: 'pgimg/a'+currnetIdx+'.jpg'});
             currnetIdx = currnetIdx -1;
-
-            const colorThief = new ColorThief();
-            var colors = colorThief.getPalette($('#sample_img')[0],8);
+            colors = colorThief.getPalette($('#sample_img')[0],8);
 
             //색상 추출 후 배경에 그라데이션 처리
             $('body').css({
@@ -92,12 +83,12 @@
             $('.button').css({
                 background:'linear-gradient(rgb('+ colors[0]+'), rgb('+ colors[1]+'), rgb('+ colors[2]+'))'
             });
-            $('.back_home').css({
-                background:'linear-gradient(rgb('+ colors[0]+'), rgb('+ colors[1]+'), rgb('+ colors[2]+'))'
-            });
+            timer = undefined;
         }, 3750);
     }
-    stopMotion();
+    if(timer == undefined){
+        stopMotion();
+    }
     
     
 </script>

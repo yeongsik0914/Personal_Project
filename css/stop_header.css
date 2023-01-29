@@ -11,4 +11,9 @@
 
 .back_home a {
     color: white;
+    font-size: 16px;
+}
+
+.back_home:hover {
+    border-color: #d195ff;
 }
