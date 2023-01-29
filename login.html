@@ -5,34 +5,78 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>로그인</title>
-    <link rel="stylesheet" type="text/css" href="css/common.css">
-    <link rel="stylesheet" type="text/css" href="css/header.css">
-    <link rel="stylesheet" type="text/css" href="css/login.css">i
-    <link rel="stylesheet" type="text/css" href="css/footer.css">
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-    <script>
-        // HTML file include
-        $(document).ready(function () {
-            $("div[data-includeHTML]").each(function () {
-                $(this).load($(this).attr("data-includeHTML"));
-            });
-        });
-    </script>
+    <style>
+        .background{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(30, 28, 28, 0.8);
+
+            /* 숨기기 */
+            z-index: -1;
+            opacity: 0;
+            transition: all, 1s;
+        }
+        .window {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        .popup {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #ffffff;
+            box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
+            border-radius: 30px;
+            width: 700px;
+            height: 550px;
+            transform: translate(-50%, -80%);
+            transition: all, 1s;
+        }
+        .show {
+            opacity: 1;
+            z-index: 1000;
+            transition: all, 1s;
+        }
+        .show .popup {
+            transform: translate(-50%, -50%);
+            transition: all, 1s;
+        }
+        .close_btn {
+            width: 25px;
+            height: 25px;
+            float: right;
+            margin-right: 20px;
+            margin-top: 20px;
+        }
+        .close_btn:hover {
+            width: 28px;
+            height: 28px;
+        }
+    </style>
 </head>
 <body>
-        <header>
-            <a href="index.html"><img src="img/logo_transparent.jpg"></a>
-        </header>
-        <main>
-            <form action="">
-                <table>
-                    
-                </table>
-            </form>
-        </main>
-        <footer>
-            <div data-includeHTML="footer.html"></div>
-        </footer>
-    </div>
+    <div class="background">
+        <div class="window">
+            <div class="popup">
+               <a href="#" onclick="login_out()"><img class="close_btn" src="img/X-icon.png"></a> 
+            </div>
+        </div>
+    </div>        
 </body>
 </html>
+<script>
+    function login_Click() {
+        $('.background').attr({class: 'background show'});
+    }
+
+    function login_out() {
+        $('.background').attr({class: 'background'});
+    }
+   
+</script>
